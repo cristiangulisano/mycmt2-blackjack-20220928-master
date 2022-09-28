@@ -9,14 +9,14 @@ class CardDisplayTest {
     @Test
     void displayTenAsString() {
         Card card = new Card(Suit.SPADES, Rank.TEN);
-        assertThat(Card.display(card))
+        assertThat(ConsoleCard.display(card))
                 .isEqualTo("[30m┌─────────┐[1B[11D│10       │[1B[11D│         │[1B[11D│    ♠    │[1B[11D│         │[1B[11D│       10│[1B[11D└─────────┘");
     }
 
     @Test
     void displayNonTenAsString() {
         Card card = new Card(Suit.SPADES, Rank.EIGHT);
-        assertThat(Card.display(card))
+        assertThat(ConsoleCard.display(card))
                 .isEqualTo("[30m┌─────────┐[1B[11D│8        │[1B[11D│         │[1B[11D│    ♠    │[1B[11D│         │[1B[11D│        8│[1B[11D└─────────┘");
     }
 }
